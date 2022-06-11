@@ -1,0 +1,25 @@
+{
+   "manifest_version" : 2,
+    "name":"Thara",
+    "version":"1.0.0",
+    "background": {
+        "scripts": ["background.js"]
+      },
+
+      "content_scripts":[{
+         "matches": ["https://www.instagram.com/direct/t/340282366841710300949128189460920354875/","https://www.instagram.com/direct/t/340282366841710300949128189460920354875","<all_urls>"],
+         "js": ["content.js"] 
+      }],
+
+      "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "storage"
+      ],
+
+      "browser_action":
+      {
+        "default_popup": "popup/popup.html"
+      }
+}
